@@ -38,19 +38,38 @@ import calendar
 from calendar import month_name
 todaymonth = datetime.today().month
 tdmonth = month_name[todaymonth]
-todaydate = datetime.today().day
-
+tddate = datetime.today().day
+todaydate = str(tddate)
 
 name = input ("Hello, what is your name? ")
 month = input ("Hi " + name + ", what was the name of the month you were born in? ")
-year = input ("And what year were you born in, " + name + "? ")
+yr = input ("And what year were you born in, " + name + "? ")
+year = int(yr)
 date = input ("And the day? ")
-if month == "October" or month == "october":  
+if month == "October":  
     if date == "31":
         print ("You were born on Halloween!")
 if month ==  tdmonth:
-    print ("Oh, so close!")
     if date == todaydate:
         print ("Happy birthday!")
+if month == "December" or month == "January" or month == "February":
+    season = " winter "
+if month == "March" or month == "April" or month == "May":
+    season = " spring "
+if month == "June" or month == "July" or month == "August":
+    season = " summer "
+if month == "September" or month == "October" or month == "November":
+    season = " fall "
+if year >= 2000:
+    age = " two thousands."
+if year >= 1990 and year <= 1999:
+    age = " nineties."
+if year >= 1980 and year <= 1989:
+    age = " eighties."
+if year <= 1979:
+    age = " stone age."
+print (name + ", you are a" + season + "baby of the" + age)
+
+
 
 
