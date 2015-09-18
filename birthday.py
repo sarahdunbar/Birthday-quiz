@@ -69,7 +69,7 @@ else:
     if year >= 1980 and year <= 1989:
         age = " eighties."
     if year <= 1979:
-        age = " stone age."
+        age = " Stone Age."
     print (name + ", you are a" + season + "baby of the" + age)
 
 
